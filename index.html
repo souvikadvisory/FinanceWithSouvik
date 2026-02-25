@@ -63,22 +63,19 @@ section:nth-child(even) { background:#f7f9fc; }
 .blog-card:hover { box-shadow:0 4px 20px rgba(26,39,68,0.1); transform:translateY(-2px); }
 .bc-top { display:flex; align-items:center; gap:8px; margin-bottom:12px; flex-wrap:wrap; }
 .ctag { font-size:10px; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; padding:3px 8px; }
-.ct-Banking { background:#e8f0fb; color:#1a2744; }
-.ct-Economics { background:#e8f5ee; color:#1a6632; }
-.ct-Investment { background:#fdf3e3; color:#8a4f00; }
-.ct-Insurance { background:#f3e8fb; color:#5a1a7a; }
-.ct-Finance { background:#fbe8e8; color:#7a1a1a; }
+.ct-Banking{background:#e8f0fb;color:#1a2744;}
+.ct-Economics{background:#e8f5ee;color:#1a6632;}
+.ct-Investment{background:#fdf3e3;color:#8a4f00;}
+.ct-Insurance{background:#f3e8fb;color:#5a1a7a;}
+.ct-Finance{background:#fbe8e8;color:#7a1a1a;}
 .bc-meta { font-size:12px; color:#999; margin-left:auto; display:flex; gap:10px; }
 .bc-title { font-family:'Merriweather',serif; font-size:17px; font-weight:700; color:#1a2744; margin-bottom:8px; line-height:1.35; }
 .bc-excerpt { font-size:13px; color:#666; line-height:1.7; margin-bottom:14px; }
 .bc-footer { display:flex; justify-content:space-between; align-items:center; }
 .bc-readmore { font-size:13px; font-weight:600; color:#1a2744; }
-.bc-del { background:none; border:none; color:#ddd; cursor:pointer; font-size:14px; padding:4px 6px; transition:color 0.2s; }
-.bc-del:hover { color:#c0392b; }
 .blog-empty { grid-column:1/-1; text-align:center; padding:60px 20px; }
 .blog-empty h3 { font-family:'Merriweather',serif; font-size:20px; color:#ccc; margin-bottom:10px; }
 .blog-empty p { font-size:14px; color:#bbb; }
-.blog-loading { grid-column:1/-1; text-align:center; padding:60px 20px; color:#999; font-size:14px; }
 
 .contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:start; }
 .contact-info p { color:#555; font-size:15px; margin-bottom:28px; line-height:1.8; }
@@ -95,30 +92,7 @@ section:nth-child(even) { background:#f7f9fc; }
 footer { background:#1a2744; color:rgba(255,255,255,0.5); text-align:center; padding:24px 8%; font-size:13px; }
 footer span { color:rgba(255,255,255,0.8); }
 
-.admin-fab { position:fixed; bottom:28px; right:28px; background:#1a2744; color:#c8a84b; border:none; width:52px; height:52px; border-radius:50%; font-size:22px; cursor:pointer; box-shadow:0 4px 18px rgba(26,39,68,0.45); z-index:300; display:flex; align-items:center; justify-content:center; transition:background 0.2s,transform 0.2s; }
-.admin-fab:hover { background:#243460; transform:scale(1.08); }
-
-.overlay { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.55); z-index:400; align-items:center; justify-content:center; padding:20px; }
-.overlay.open { display:flex; }
-.modal { background:#fff; width:100%; max-width:560px; max-height:90vh; overflow-y:auto; border-top:4px solid #1a2744; }
-.modal-hdr { padding:22px 28px 16px; border-bottom:1px solid #e0e8f0; display:flex; justify-content:space-between; align-items:center; }
-.modal-hdr h2 { font-family:'Merriweather',serif; font-size:18px; color:#1a2744; }
-.mclose { background:none; border:none; font-size:26px; color:#aaa; cursor:pointer; }
-.mclose:hover { color:#333; }
-.modal-body { padding:22px 28px; }
-.screen { display:none; }
-.screen.active { display:block; }
-.pwd-info { font-size:14px; color:#666; margin-bottom:18px; text-align:center; }
-.field { margin-bottom:14px; }
-.field label { display:block; font-size:11px; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:#1a2744; margin-bottom:5px; }
-.field input,.field select,.field textarea { width:100%; padding:11px 14px; border:1px solid #d0d8e8; font-family:'Open Sans',sans-serif; font-size:14px; color:#333; outline:none; transition:border-color 0.2s; resize:vertical; background:#fff; }
-.field input:focus,.field select:focus,.field textarea:focus { border-color:#1a2744; }
-.two-col { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
-.errmsg { font-size:13px; color:#c0392b; margin-bottom:10px; text-align:center; display:none; }
-.btn-pub { width:100%; padding:13px; background:#1a2744; color:#fff; border:none; font-family:'Open Sans',sans-serif; font-size:13px; font-weight:600; letter-spacing:0.08em; cursor:pointer; transition:background 0.2s; margin-top:6px; }
-.btn-pub:hover { background:#c8a84b; color:#1a2744; }
-.btn-pub:disabled { background:#999; cursor:not-allowed; }
-
+/* POST OVERLAY */
 .post-overlay { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.6); z-index:500; overflow-y:auto; padding:24px; }
 .post-overlay.open { display:block; }
 .post-modal { background:#fff; max-width:700px; margin:40px auto; padding:48px; position:relative; }
@@ -130,17 +104,16 @@ footer span { color:rgba(255,255,255,0.8); }
 .p-body { font-size:15px; color:#444; line-height:1.9; white-space:pre-wrap; }
 
 @media(max-width:768px){
-  .nav-links { display:none; }
-  .hero { flex-direction:column; padding:50px 5%; gap:28px; text-align:center; }
-  .hero-stats { justify-content:center; }
-  .hero-bio { margin:0 auto 24px; }
-  .about-cards { grid-template-columns:1fr; }
-  .exp-item { grid-template-columns:1fr; gap:8px; }
-  .blog-grid { grid-template-columns:1fr; }
-  .contact-grid { grid-template-columns:1fr; gap:40px; }
-  .two-col { grid-template-columns:1fr; }
-  .post-modal { padding:28px 18px; margin:20px auto; }
-  section { padding:50px 5%; }
+  .nav-links{display:none;}
+  .hero{flex-direction:column;padding:50px 5%;gap:28px;text-align:center;}
+  .hero-stats{justify-content:center;}
+  .hero-bio{margin:0 auto 24px;}
+  .about-cards{grid-template-columns:1fr;}
+  .exp-item{grid-template-columns:1fr;gap:8px;}
+  .blog-grid{grid-template-columns:1fr;}
+  .contact-grid{grid-template-columns:1fr;gap:40px;}
+  .post-modal{padding:28px 18px;margin:20px auto;}
+  section{padding:50px 5%;}
 }
 </style>
 </head>
@@ -260,7 +233,7 @@ footer span { color:rgba(255,255,255,0.8); }
     <button class="bf-btn" onclick="setFilter('Finance',this)">Finance</button>
   </div>
   <div class="blog-grid" id="blogGrid">
-    <div class="blog-loading">Loading articles…</div>
+    <div class="blog-empty"><p style="color:#aaa;font-size:14px;">Loading articles…</p></div>
   </div>
 </section>
 
@@ -285,51 +258,74 @@ footer span { color:rgba(255,255,255,0.8); }
 
 <footer>© 2026 <span>Souvik Das</span> · Finance Professional · Kolkata · souvikadvisory.github.io</footer>
 
-<button class="admin-fab" onclick="openAdmin()" title="Write Article">✎</button>
+<!-- POST READ OVERLAY -->
+<div class="post-overlay" id="postOverlay" onclick="closePost()">
+  <div class="post-modal" onclick="event.stopPropagation()">
+    <button class="pclose" onclick="closePost()">×</button>
+    <div class="p-cat" id="pCat"></div>
+    <div class="p-title" id="pTitle"></div>
+    <div class="p-meta" id="pMeta"></div>
+    <div class="p-body" id="pBody"></div>
+  </div>
+</div>
 
-<!-- ADMIN OVERLAY -->
-<div class="overlay" id="adminOverlay">
-  <div class="modal" onclick="event.stopPropagation()">
-    <div class="modal-hdr">
-      <h2 id="mTitle">Admin Login</h2>
-      <button class="mclose" onclick="closeAdmin()">×</button>
-    </div>
-    <div class="modal-body">
-      <div class="screen active" id="pwdScreen">
-        <p class="pwd-info">Enter your password to publish an article.</p>
-        <div class="field">
-          <label>Password</label>
-          <input type="password" id="pwdInput" placeholder="Enter password" onkeydown="if(event.key==='Enter')checkPwd()">
-        </div>
-        <p class="errmsg" id="pwdError">Incorrect password. Please try again.</p>
-        <button class="btn-pub" onclick="checkPwd()">Unlock →</button>
-      </div>
-      <div class="screen" id="formScreen">
-        <div class="field">
-          <label>Article Title *</label>
-          <input type="text" id="fTitle" placeholder="e.g. How RBI Rate Cuts Affect Your Savings">
-        </div>
-        <div class="two-col">
-          <div class="field">
-            <label>Category *</label>
-            <select id="fCat">
-              <option value="">Select…</option>
-              <option>Banking</option>
-              <option>Economics</option>
-              <option>Investment</option>
-              <option>Insurance</option>
-              <option>Finance</option>
-            </select>
-          </div>
-          <div class="field">
-            <label>Reading Time (min) *</label>
-            <input type="number" id="fRT" placeholder="5" min="1" max="60">
-          </div>
-        </div>
-        <div class="field">
-          <label>Short Summary *</label>
-          <textarea id="fExcerpt" rows="3" placeholder="2–3 sentence summary shown on the listing…"></textarea>
-        </div>
-        <div class="field">
-          <label>Full Article *</label>
-          <textarea id="fContent" rows="10" placeholder=
+<script>
+var posts = [];
+var activeFilter = 'All';
+
+function esc(s){ return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+function fmt(d){ try{ return new Date(d).toLocaleDateString('en-IN',{day:'numeric',month:'long',year:'numeric'}); }catch(e){ return d||''; } }
+
+// Load posts.json from the same repo
+fetch('./posts.json?v=' + Date.now())
+  .then(function(r){ return r.json(); })
+  .then(function(data){
+    posts = data;
+    render();
+  })
+  .catch(function(){
+    document.getElementById('blogGrid').innerHTML = '<div class="blog-empty"><h3>Could not load articles</h3><p>Make sure posts.json is uploaded to your GitHub repo.</p></div>';
+  });
+
+function render(){
+  var g = document.getElementById('blogGrid');
+  var list = activeFilter==='All' ? posts : posts.filter(function(p){ return p.cat===activeFilter; });
+  if(!list.length){
+    g.innerHTML = '<div class="blog-empty"><h3>'+(activeFilter==='All'?'No articles yet':'No '+activeFilter+' articles')+'</h3><p>Edit posts.json on GitHub to add articles.</p></div>';
+    return;
+  }
+  g.innerHTML = list.map(function(p){
+    return '<div class="blog-card" onclick="openPost('+p.id+')">'+
+      '<div class="bc-top">'+
+        '<span class="ctag ct-'+esc(p.cat)+'">'+esc(p.cat)+'</span>'+
+        '<div class="bc-meta"><span>⏱ '+p.rt+' min</span><span>'+fmt(p.date)+'</span></div>'+
+      '</div>'+
+      '<div class="bc-title">'+esc(p.title)+'</div>'+
+      '<div class="bc-excerpt">'+esc(p.excerpt)+'</div>'+
+      '<div class="bc-footer"><span class="bc-readmore">Read Article →</span><span style="font-size:12px;color:#aaa">Souvik Das</span></div>'+
+    '</div>';
+  }).join('');
+}
+
+function setFilter(cat,btn){
+  activeFilter = cat;
+  document.querySelectorAll('.bf-btn').forEach(function(b){ b.classList.remove('active'); });
+  btn.classList.add('active');
+  render();
+}
+
+function openPost(id){
+  var p = null;
+  for(var i=0;i<posts.length;i++){ if(posts[i].id===id){p=posts[i];break;} }
+  if(!p) return;
+  document.getElementById('pCat').innerHTML='<span class="ctag ct-'+esc(p.cat)+'">'+esc(p.cat)+'</span>';
+  document.getElementById('pTitle').textContent = p.title;
+  document.getElementById('pMeta').textContent = fmt(p.date)+' · '+p.rt+' min read · By Souvik Das';
+  document.getElementById('pBody').textContent = p.content;
+  document.getElementById('postOverlay').classList.add('open');
+}
+
+function closePost(){ document.getElementById('postOverlay').classList.remove('open'); }
+</script>
+</body>
+</html>
